@@ -4,12 +4,7 @@ GREEN='\033[0;32m'
 YELLOW='\033[0;93m'
 RED='\033[0;31m'
 NC='\033[0m'
-echo "Syncing 5 node, please wait...";
-northernd -datadir=/home/northern5/.northern -daemon
-sleep 10 
-until northern-cli -datadir=/home/northern5/.northern mnsync status | grep -m 1 '"IsBlockchainSynced": true,'; do sleep 1 ; done > /dev/null 2>&1
-echo -e ${GREEN}"Last node is fully synced. You 5 masternode is running!"${NC}
-sleep 10
+
 echo "Syncing 6 node, please wait...";
 northernd -datadir=/home/northern6/.northern -daemon
 sleep 10 
