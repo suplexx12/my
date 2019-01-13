@@ -4,7 +4,6 @@ GREEN='\033[0;32m'
 YELLOW='\033[0;93m'
 RED='\033[0;31m'
 NC='\033[0m'
-fi
 echo "Syncing 5 node, please wait...";
 northernd -datadir=/home/northern5/.northern -daemon
 sleep 10 
