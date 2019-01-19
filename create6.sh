@@ -21,7 +21,7 @@ read AGREE
 
 echo -e ${GREEN}"Please Enter Your Masternodes Private Key for 6th node:"${NC}
 read privkey6
-
+sudo adduser --system --home /home/northern6 northern6
 echo -e "${GREEN}Configuring Wallet for 6th node${NC}"
 sudo mkdir /home/northern6/.northern
 sudo touch /home/northern6/.northern/northern.conf
