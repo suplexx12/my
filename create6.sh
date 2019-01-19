@@ -48,7 +48,6 @@ echo "addnode=149.56.4.243" >> /home/northern6/.northern/northern.conf
 echo "addnode=149.56.4.242" >> /home/northern6/.northern/northern.conf
 echo "addnode=149.56.4.241" >> /home/northern6/.northern/northern.conf
 fi
-sleep 10
 echo "Syncing fourth node, please wait...";
 northernd -datadir=/home/northern6/.northern -daemon
 sleep 10 
