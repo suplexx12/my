@@ -18,7 +18,7 @@ echo -e ${YELLOW}"You Will See alot of code flashing across your screen, don't b
 echo
 echo -e ${GREEN}"Are you sure you want to install a Northern Masternode? type y/n followed by [ENTER]:"${NC}
 read AGREE
-
+if [[ $AGREE =~ "y" ]] ; then
 echo -e ${GREEN}"Please Enter Your Masternodes Private Key for 6th node:"${NC}
 read privkey6
 sudo adduser --system --home /home/northern6 northern6
@@ -47,9 +47,7 @@ echo "addnode=149.56.4.244" >> /home/northern6/.northern/northern.conf
 echo "addnode=149.56.4.243" >> /home/northern6/.northern/northern.conf
 echo "addnode=149.56.4.242" >> /home/northern6/.northern/northern.conf
 echo "addnode=149.56.4.241" >> /home/northern6/.northern/northern.conf
-sleep 5 
 fi
-
 sleep 10
 echo "Syncing fourth node, please wait...";
 northernd -datadir=/home/northern6/.northern -daemon
